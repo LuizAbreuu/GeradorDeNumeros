@@ -32,11 +32,18 @@ namespace GeradordeNumeros
 
             numerosAleatorios.Sort();
 
-            resultadoLabel.Text = "Números aleatórios:\n";
+            resultadoLabel.Text = "NÃºmeros aleatÃ³rios:\n";
 
-            foreach (int numero in numerosAleatorios)
+            for (int i = 0; i < numerosAleatorios.Count; i++)
             {
-                resultadoLabel.Text += numero + ", ";
+                if (i < numerosAleatorios.Count - 1)
+                {
+                    resultadoLabel.Text += numerosAleatorios[i] + ", ";
+                }
+                else
+                {
+                    resultadoLabel.Text += numerosAleatorios[i];
+                }
             }
         }
     }
